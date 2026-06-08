@@ -66,4 +66,4 @@ gov-hall-digital-human/
 ## 参考
 
 - DeepSeek API Docs: https://api-docs.deepseek.com/
-- 魔珐星云 Lite SDK CDN: https://media.xingyun3d.com/xingyun3d/general/litesdk/xmovAvatar@latest.js
+- 魔珐星云 Lite SDK CDN: [具身驱动SDK（JS版本）接入说明](https://xingyun3d.com/developers/52-183)
