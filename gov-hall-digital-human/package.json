@@ -1,0 +1,14 @@
+{
+  "name": "gov-hall-digital-human",
+  "version": "1.0.0",
+  "private": true,
+  "description": "政务大厅魔珐星云数字人 + DeepSeek 对话 Demo",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

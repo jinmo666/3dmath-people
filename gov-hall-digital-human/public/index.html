@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>政务大厅咨询数字人</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231d4f91'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='34' fill='white' font-family='Arial'%3E政%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://media.xingyun3d.com/xingyun3d/general/litesdk/xmovAvatar@latest.js"
+      defer
+    ></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">政</span>
+          <div>
+            <h1>政务大厅咨询数字人</h1>
+            <p>DeepSeek 智能问答 · 魔珐星云数字人播报</p>
+          </div>
+        </div>
+
+        <div class="status-cluster">
+          <div class="status-pill">
+            <span class="status-dot" id="status-light"></span>
+            <span id="status-text">未连接</span>
+          </div>
+          <div class="status-pill muted" id="deepseek-status">DeepSeek 待配置</div>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <nav class="module-sidebar" aria-label="工作台模块">
+          <button class="module-tab active" type="button" data-module="chat">
+            <span>咨询</span>
+          </button>
+          <button class="module-tab" type="button" data-module="config">
+            <span>接入</span>
+          </button>
+          <button class="module-tab" type="button" data-module="quick">
+            <span>常用</span>
+          </button>
+          <button class="module-tab" type="button" data-module="map">
+            <span>窗口</span>
+          </button>
+        </nav>
+
+        <section class="stage-area" aria-label="数字人舞台">
+          <div class="stage-toolbar">
+            <div>
+              <strong>接待定位</strong>
+              <span>大厅引导、材料清单、办理流程、窗口位置</span>
+            </div>
+            <div class="stage-actions">
+              <button class="btn secondary" id="ratio-btn" type="button">切换竖屏</button>
+              <button class="btn secondary" id="interrupt-btn" type="button">打断播报</button>
+            </div>
+          </div>
+          <div id="sdk-wrapper">
+            <div id="sdk"></div>
+          </div>
+          <div class="subtitle-strip" aria-live="polite">
+            <div id="custom-subtitle"></div>
+          </div>
+        </section>
+
+        <aside class="assistant-area" aria-label="咨询工作台">
+          <section class="panel module-panel chat-panel" data-panel="chat">
+            <div class="panel-heading">
+              <h2>群众咨询</h2>
+              <button class="text-btn" id="clear-btn" type="button">清空</button>
+            </div>
+
+            <div class="messages" id="messages" aria-live="polite"></div>
+
+            <form class="chat-form" id="chat-form">
+              <input
+                id="question-input"
+                autocomplete="off"
+                placeholder="例如：社保补缴去哪办？需要带什么？"
+              />
+              <button class="btn primary" type="submit">发送</button>
+            </form>
+          </section>
+
+          <section class="panel module-panel config-panel" data-panel="config" hidden>
+            <div class="panel-heading">
+              <h2>接入配置</h2>
+              <span class="panel-note">凭证只在当前页面内使用</span>
+            </div>
+            <div class="credential-grid">
+              <label>
+                <span>App ID</span>
+                <input
+                  id="xmov-app-id"
+                  type="password"
+                  autocomplete="off"
+                  placeholder="输入魔珐 AppID"
+                />
+              </label>
+              <label>
+                <span>App Secret</span>
+                <input
+                  id="xmov-app-secret"
+                  type="password"
+                  autocomplete="off"
+                  placeholder="输入魔珐 AppSecret"
+                />
+              </label>
+              <label>
+                <span>DeepSeek API Key</span>
+                <input
+                  id="deepseek-key"
+                  type="password"
+                  autocomplete="off"
+                  placeholder="服务端未配置时填写"
+                />
+              </label>
+              <label class="model-select">
+                <span>模型</span>
+                <select id="deepseek-model">
+                  <option value="deepseek-v4-flash">deepseek-v4-flash</option>
+                  <option value="deepseek-v4-pro">deepseek-v4-pro</option>
+                </select>
+              </label>
+            </div>
+            <div class="button-row">
+              <button class="btn primary" id="connect-btn" type="button">连接数字人</button>
+              <button class="btn danger" id="disconnect-btn" type="button" hidden>断开</button>
+            </div>
+          </section>
+
+          <section class="panel module-panel quick-panel" data-panel="quick" hidden>
+            <h2>常用咨询</h2>
+            <div class="quick-grid">
+              <button type="button" data-prompt="社保补缴应该去哪个窗口办理？需要携带哪些材料？">
+                社保补缴
+              </button>
+              <button type="button" data-prompt="办理营业执照需要准备哪些材料？大概流程是什么？">
+                营业执照
+              </button>
+              <button type="button" data-prompt="医保报销材料不齐怎么办？可以先取号吗？">
+                医保报销
+              </button>
+              <button type="button" data-prompt="政务大厅周末开放吗？午休期间还能咨询吗？">
+                开放时间
+              </button>
+            </div>
+          </section>
+
+          <section class="panel module-panel map-panel" data-panel="map" hidden>
+            <h2>窗口示意</h2>
+            <img src="./assets/hall-map.svg" alt="政务大厅窗口分布示意图" />
+          </section>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="420" viewBox="0 0 680 420" role="img" aria-labelledby="title desc">
+  <title id="title">政务大厅窗口分布示意图</title>
+  <desc id="desc">大厅入口、咨询台、自助区、社保、医保、企业开办和综合受理窗口的平面示意。</desc>
+  <rect width="680" height="420" fill="#f8fafc"/>
+  <rect x="24" y="24" width="632" height="372" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="52" y="328" width="140" height="42" rx="6" fill="#1d4f91"/>
+  <text x="122" y="355" fill="#ffffff" font-size="18" text-anchor="middle" font-family="Microsoft YaHei, Arial">大厅入口</text>
+  <path d="M122 328V260" stroke="#b58a2b" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 9"/>
+  <circle cx="122" cy="247" r="8" fill="#b58a2b"/>
+
+  <rect x="64" y="64" width="150" height="74" rx="8" fill="#edf6ff" stroke="#8db7e7"/>
+  <text x="139" y="96" fill="#17324f" font-size="18" text-anchor="middle" font-family="Microsoft YaHei, Arial">咨询导办台</text>
+  <text x="139" y="122" fill="#66758a" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">取号 / 分流</text>
+
+  <rect x="258" y="64" width="160" height="74" rx="8" fill="#f6fbf8" stroke="#86c7a7"/>
+  <text x="338" y="96" fill="#174b35" font-size="18" text-anchor="middle" font-family="Microsoft YaHei, Arial">自助服务区</text>
+  <text x="338" y="122" fill="#66758a" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">查询 / 打印</text>
+
+  <rect x="468" y="64" width="140" height="74" rx="8" fill="#fff7e5" stroke="#d7b25b"/>
+  <text x="538" y="96" fill="#5c4214" font-size="18" text-anchor="middle" font-family="Microsoft YaHei, Arial">休息等候</text>
+  <text x="538" y="122" fill="#66758a" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">叫号屏</text>
+
+  <rect x="64" y="190" width="128" height="82" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="64" y="190" width="128" height="26" rx="8" fill="#dfeaf6"/>
+  <text x="128" y="209" fill="#17324f" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">A 区</text>
+  <text x="128" y="244" fill="#17212f" font-size="18" text-anchor="middle" font-family="Microsoft YaHei, Arial">社保业务</text>
+
+  <rect x="212" y="190" width="128" height="82" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="212" y="190" width="128" height="26" rx="8" fill="#e2f4ea"/>
+  <text x="276" y="209" fill="#174b35" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">B 区</text>
+  <text x="276" y="244" fill="#17212f" font-size="18" text-anchor="middle" font-family="Microsoft YaHei, Arial">医保业务</text>
+
+  <rect x="360" y="190" width="128" height="82" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="360" y="190" width="128" height="26" rx="8" fill="#fff1cf"/>
+  <text x="424" y="209" fill="#5c4214" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">C 区</text>
+  <text x="424" y="236" fill="#17212f" font-size="18" text-anchor="middle" font-family="Microsoft YaHei, Arial">企业开办</text>
+  <text x="424" y="259" fill="#66758a" font-size="13" text-anchor="middle" font-family="Microsoft YaHei, Arial">营业执照</text>
+
+  <rect x="508" y="190" width="100" height="82" rx="8" fill="#ffffff" stroke="#94a3b8"/>
+  <rect x="508" y="190" width="100" height="26" rx="8" fill="#f7e7e7"/>
+  <text x="558" y="209" fill="#7a2424" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">D 区</text>
+  <text x="558" y="236" fill="#17212f" font-size="17" text-anchor="middle" font-family="Microsoft YaHei, Arial">综合受理</text>
+  <text x="558" y="259" fill="#66758a" font-size="13" text-anchor="middle" font-family="Microsoft YaHei, Arial">兜底咨询</text>
+
+  <path d="M122 247H558" stroke="#b58a2b" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 9"/>
+  <circle cx="128" cy="190" r="7" fill="#b58a2b"/>
+  <circle cx="276" cy="190" r="7" fill="#b58a2b"/>
+  <circle cx="424" cy="190" r="7" fill="#b58a2b"/>
+  <circle cx="558" cy="190" r="7" fill="#b58a2b"/>
+
+  <text x="340" y="350" fill="#66758a" font-size="14" text-anchor="middle" font-family="Microsoft YaHei, Arial">示意布局可按实际大厅窗口调整</text>
+</svg>
